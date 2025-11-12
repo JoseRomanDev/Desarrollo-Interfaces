@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="container-form">
+        <h2>Control con Meter y progress</h2>
+        <br>
+        <label for="meter">Nivel actual: </label>
+        <meter id="meter" value="32" min="0" max="100"></meter>
+        <br>
+        <label for="progress">Progreso actual: </label>
+        <progress id="progress" value="50" max="100"></progress>
+        <br><br>
+
+        <label for="input">Nuevo valor meter</label>
+        <input  id="input" type="number" />
+        <br><br>
+        <button id="show" type="button">Mostrar valor del meter</button>
+        <button id="ci" type="button">Cambiar valor del meter -- input</button>
+        <button id="cp" type="button">Cambiar valor del meter -- Progress</button>
+    </form>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
