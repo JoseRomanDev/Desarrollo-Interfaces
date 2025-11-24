@@ -52,17 +52,17 @@ h2 + ul > li{
 
 
 /*12*/
-li:has(a){
+li > a{
     border: 1px solid blue;
 }
 
 /*13*/
-ul:first-child li{
+ul:nth-of-type(2) li:first-child{
     background-color: yellow;
 }
 
 /*14*/
-ul:last-child li{
+ul:nth-of-type(2) li:last-child{
     background-color: green;
 }
 
