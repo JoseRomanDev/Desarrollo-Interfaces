@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos_registro.css">
+    <meta name="description" content="Formulario de registro de Puntos de Interés (POI)">
+    <meta name="keywords" content="POI, registro, geolocalización, ocupación, mapa">
+    <meta name="author" content="Ruben">
+    <title>Registro de Puntos de Interés</title>
+</head>
+<body>
+    <h1>Registro de Punto de Interés (POI)</h1>
+    <form action="procesamiento.php" method="post">
+        <fieldset>
+            <legend>Datos del POI</legend>
+
+            <label for="nombre">Nombre del POI:</label>
+            <input type="text" id="nombre" name="nombre" required autofocus>
+
+            <label for="correo">Correo de contacto:</label>
+            <input type="email" id="correo" name="correo">
+
+            <label for="latitud">Latitud:</label>
+            <input type="number" id="latitud" name="latitud">
+
+            <label for="longitud">Longitud:</label>
+            <input type="number" id="longitud" name="longitud">
+
+            <label for="tipos">Tipo de POI:</label>
+            <select id="tipos" name="tipos">
+                <option value="restaurante">Museo</option>
+                <option value="museo">Parque</option>
+                <option value="parque">Oficina</option>
+                <option value="hotel">Monumento</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Parámetros del Recurso</legend>
+            <label for="ocupacion" >Nivel de Ocupación (0-100):</label>
+            <input type="number" id="ocupacion" name="ocupacion" min="0" max="100" required>
+
+            <label for="capacidad">Capacidad Actual (visual):</label>
+            <meter id="capacidad_actual" value="0" min="0" max="100">0%</meter><br><br>
+
+            <label>Estado del POI:</label><br><br>
+            <input type="radio" name="estado" value="Operativo" checked> Operativo <br>
+            <input type="radio" name="estado" value="En Mantenimiento"> En Mantenimiento <br>
+            <input type="radio" name="estado" value="Cerrado"> Cerrado
+
+            <br><br>
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios"></textarea>
+        </fieldset>
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar</button>
+        </form>
+        
+
+        <script>
+            const ocupacion = document.getElementById('ocupacion');
+            const capacidad = document.getElementById('capacidad_actual');
+            ocupacion.addEventListener('input', () => {
+            capacidad.value = ocupacion.value;
+        });
+        </script>
+        
+</body>
+</html>

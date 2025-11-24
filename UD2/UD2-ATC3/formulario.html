@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="procesar.php" method="POST">
+        <center> <h1>Formulario de Registro</h1></center>
+        <center> <h4>Congreso Internacional de Conferencias y Talleres</h4></center>
+        <center><h5>Los campos marcados con * son obligatorios</h5></center>
+
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="nombre">Nombre Completo *: </label><br>
+            <input type="text" required><br><br>
+            
+            <label for="color">Color de Acreditación *: </label><br>
+            <input type="color" required><br><br>
+
+            <label for="correo">Correo Electrónico *: </label><br>
+            <input type="email" placeholder="ejemplo@crorreo.com" required><br><br>
+
+            <label for="teléfono">Teléfono *: </label><br>
+            <input type="tel" pattern="[0-9]{9}" placeholder="600123456" required><br><br>
+
+            <label for="fechaNac">Fecha de Nacimiento *: </label><br>
+            <input type="date" required><br><br>
+
+            <label for="paísresidente">País de Residencia *:</label><br>
+            <select name="país" required>
+                <option value="">Seleccione...</option>
+                <option>España</option>
+                <option>México</option>
+                <option>Argentina</option>
+                <option>Colombia</option>
+                <option>Chile</option>
+            </select><br><br>
+
+            <label for="genero">Género *: </label><br>
+             <select name="genero" required>
+                <option value="">Seleccione...</option>
+                <option>Masculino</option>
+                <option>Femenino</option>
+                <option>Otro</option>
+            </select>
+        </fieldset> <br>
+
+        <fieldset>
+            <legend>Educación y Ocupación</legend>
+
+            <label>Profesión / Ocupación *:</label>
+            <input type="text" name="profesion" required><br><br>
+
+            <label>Nivel educativo *:</label>
+            <select name="educacion" required>
+                <option value="Seleccionar">Seleccione...</option>
+                <option>Primaria</option>
+                <option>Secundaria</option>
+                <option>Universitaria</option>
+                <option>Grado</option>
+            </select>
+        </fieldset><br>
+
+         <fieldset>
+            <legend>Preferencias y Elecciones</legend> <br>
+            <label>Preferencias dietéticas:</label><br>
+            <input type="checkbox" name="dieta" value="Vegetariana"> Vegetariano <br>
+            <input type="checkbox" name="dieta" value="Vegana"> Vegano <br>
+            <input type="checkbox" name="dieta" value="Sin gluten"> Sin gluten <br>
+            <br>
+
+            <label>Medio de transporte:</label><br>
+            <select name="transporte">
+                <option selected>Coche </option>
+                <option>Avión</option>
+                <option>Tren</option>
+                <option>Autobús</option>
+            </select>
+            <br><br>
+            <label>Idioma Preferido:</label><br>
+            <input type="radio" name="idioma" value="Español"> Español
+            <input type="radio" name="idioma" value="Inglés" checked> Inglés
+            <input type="radio" name="idioma" value="Francés"> Francés
+            <br><br>
+
+            <label>Conferencias elegidas:</label><br>
+            <input type="checkbox" name="conferencias" value="IA y Tecnología"> IA y Tecnología <br>
+            <input type="checkbox" name="conferencias" value="Diseño Web"> Diseño Web <br>
+            <input type="checkbox" name="conferencias" value="Ciberseguridad"> Ciberseguridad
+            <br><br>
+
+            <label>Talleres elegidos:</label><br>
+            <input type="checkbox" name="talleres" value="HTML5"> HTML5 <br>
+            <input type="checkbox" name="talleres" value="CSS Avanzado"> CSS3 <br>
+            <input type="checkbox" name="talleres" value="PHP Básico"> PHP Básico <br>
+        </fieldset><br><br>
+
+        <fieldset>
+            <legend>Logística del evento</legend>
+            <label>Alojamiento requerido:</label><br>
+            <input type="radio" name="alojamiento" value="Sí"> Sí
+            <input type="radio" name="alojamiento" value="No" checked> No <br><br>
+            
+            <label>Fecha de Llegada (mínimo 15/10/2023):</label><br>
+            <input type="date" name="fecha_llegada"> <br><br>
+
+            <label>Fecha de Salida (máximo 20/10/2023):</label><br>
+            <input type="date" name="fecha_salida"><br><br>
+
+            <label>Número de acompañantes (máx. 3):</label><br>
+            <input type="number" name="acompanantes" min="0" max="3"><br><br>
+
+            <label>Preferencias especiales:</label><br>
+            <textarea name="preferencias" rows="3" columns="40" placeholder="Indique si necesita alguna atención especial..."></textarea><br><br>
+
+            <label>Carga de CV (opcional):</label><br>
+            <input type="file" name="cv"><br><br>
+
+            <label>Foto de Perfil (opcional):</label><br>
+            <input type="file" name="foto"><br><br>
+
+            <label>Ocupación actual del congreso:</label><br>
+            <meter value="0.6" min="0" max="1">60%</meter>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Envío del formulario</legend>
+            <input type="image" src="4662875.png" alt="Enviar" width="20%"><br><br>
+            <input type="reset" value="Borrar formulario">
+        </fieldset>
+
+    </form>
+
+     <footer>
+        <p>&copy; 2025 Congreso Internacional de Conferencias y Talleres</p>
+     </footer>
+</body>
+</html>
