@@ -10,7 +10,7 @@ const CP = document.getElementById("cp");
 
 
 function newMeterValue(value){
-   value = INPUT.value;
+   let value = INPUT.value;
    CI = value;
 }
 
@@ -18,7 +18,7 @@ function showMeter(){
     alert(METER.value);
 }
 function setMeterAsProgress(){
-
+    METER.value = PROGRESS.value
 }
 
 SHOW.addEventListener("click", showMeter);
