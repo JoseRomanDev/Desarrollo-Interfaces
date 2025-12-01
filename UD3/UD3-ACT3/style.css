@@ -1,0 +1,81 @@
+.header{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    width: 20%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 1px;
+}
+
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 10px;
+}
+
+.normal, .outline, .alert{
+    border-radius:10px;
+    padding: 10px;
+    color: white;
+}
+
+.normal{
+    background-color: rgb(0, 153, 255);
+    border: 1px solid;
+    cursor:pointer;
+}
+
+.outline{
+    background-color:white;
+    color: rgb(0, 153, 255);
+    border:1px solid rgb(0, 153, 255);
+    cursor: crosshair;
+}
+
+.alert{
+    background: rgb(219, 49, 49);
+    border: 1px solid;
+    cursor: pointer;
+}
+
+.shadows{
+display: flex;
+justify-content: center;
+align-content: center;
+gap:50px;
+text-align: center;
+padding: 10px;
+margin: 10px;
+}
+
+.first-shadow-box{
+box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+border-radius: 10px;
+padding: 20px;
+margin: 10px;
+}
+
+.second-shadow-box{
+background: linear-gradient(to right bottom, rgb(168, 190, 211), rgb(0, 102, 255));
+border-radius: 10px;
+padding: 20px;
+margin: 10px;
+color: white;
+}
+
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+img{
+    width: 90px;
+}
